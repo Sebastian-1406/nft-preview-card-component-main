@@ -94,6 +94,15 @@ body {
     border-radius: 50%;
 }
 
+.text-white:hover {
+    color: var(--Cyan);
+    transition: color ease-in 300ms;
+}
+.card-bg:hover > .fondo::before  {
+    transition: all ease-in 300ms;
+    background-color: hsla(178, 100%, 50%, .5);
+    background-image: url("../images/icon-view.svg");
+}
 
 @media screen and (max-width: 375px){
     .card {
@@ -119,15 +128,6 @@ body {
     .card {
         max-width: 350px;
         box-shadow: 0px 25px 8px 15px #0003;
-    }
-    .text-white:hover {
-        color: var(--Cyan);
-        transition: color ease-in 300ms;
-    }
-    .card-bg:hover > .fondo::before  {
-        transition: all ease-in 300ms;
-        background-color: hsla(178, 100%, 50%, .5);
-        background-image: url("../images/icon-view.svg");
     }
 
 }
