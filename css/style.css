@@ -27,16 +27,33 @@ body {
     border-radius: 20px;
     font-size: 18px;
 }
-.card img {
+.fondo img {
     max-width: 100%;
     border-radius: 10px;
+    vertical-align: middle;
+}
+.fondo {
+    position: relative;
+    cursor: pointer;
+}
+.fondo::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all ease-in 300ms;
+
 }
 .texto {
     color: var(--Soft-blue)
 }
 .card .texto h1 {
     font-size: 1.5em;
-    color: var(--White);
 }
 .precio {
     display: flex;
@@ -52,6 +69,8 @@ body {
 }
 .text-white {
     color: var(--White);
+    cursor: pointer;
+    transition: color ease-in 300ms;
 }
 .perfil {
     display: flex;
@@ -74,6 +93,7 @@ body {
     border: 1px solid var(--White);
     border-radius: 50%;
 }
+
 
 @media screen and (max-width: 375px){
     .card {
@@ -100,4 +120,14 @@ body {
         max-width: 350px;
         box-shadow: 0px 25px 8px 15px #0003;
     }
+    .text-white:hover {
+        color: var(--Cyan);
+        transition: color ease-in 300ms;
+    }
+    .card-bg:hover > .fondo::before  {
+        transition: all ease-in 300ms;
+        background-color: hsla(178, 100%, 50%, .5);
+        background-image: url("../images/icon-view.svg");
+    }
+
 }
