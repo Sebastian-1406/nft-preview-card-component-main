@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Font-Outfit : 'Outfit', sans-serif;
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-Main : hsl(217, 54%, 11%);
+    --Very-Card : hsl(216, 50%, 16%);
+    --Very-Line : hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: var(--Font-Outfit);
+    background: var(--Very-Main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    margin: auto 20px;
+    max-width: 280px;
+    padding: 25px;
+    background-color: var(--Very-Card);
+    border-radius: 20px;
+    font-size: 18px;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.texto {
+    color: var(--Soft-blue)
+}
+.card .texto h1 {
+    font-size: 1.5em;
+    color: var(--White);
+}
+.precio {
+    display: flex;
+    justify-content: space-between;
+}
+.precio p {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.text-cyan {
+    color: var(--Cyan);
+}
+.text-white {
+    color: var(--White);
+}
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    padding-top: 5px;
+}
+.perfil::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Very-Line);
+    top: 0;
+}
+.perfil img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 375px){
+    .card {
+        font-size: 15px;
+    }
+    .texto h1 {
+        font-size: 1em;
+    }
+    .precio {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+    .precio p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+
+    .card {
+        max-width: 350px;
+        box-shadow: 0px 25px 8px 15px #0003;
+    }
+}
